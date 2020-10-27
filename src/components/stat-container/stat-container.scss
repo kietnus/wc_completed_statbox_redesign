@@ -1,0 +1,205 @@
+.stat-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // visibility: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.stat-container .board {
+    height: 70vh;
+    width: calc(80vh * 3331 / 4925);
+}
+
+@media (max-aspect-ratio: 3331/4925) {
+    .stat-container .board {
+        width: 75vw;
+        height: calc(85vw * 4925 / 3331);
+    }
+}
+
+.stat-container .stat-board {
+    position: relative;
+}
+
+.stat-container .stat-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 83%;
+    height: 91%;
+    padding: 4.5% 9% 4.5% 9%;
+}
+
+.stat-content .mission-row {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-content .mission-row p {
+    color: #913706;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.stat-content .star-row {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+.stat-content .score-row,
+.stat-content .speed-row,
+.stat-content .goal-row {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-content .goal-row {
+    height: 35%;
+}
+
+.continue-btn {
+    position: relative;
+    margin-top: 10px;
+    width: 75%;
+    height: 7vh;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5em;
+    z-index: 5;
+    cursor: pointer;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 149, 90, 1) 0%,
+        rgba(191, 81, 20, 1) 100%
+    );
+    box-shadow: inset 0 5px 2px rgba(255, 255, 255, 0.3),
+        inset 0 -5px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* .continue-btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-radius: 50px;
+    opacity: 0.5;
+    overflow: hidden;
+} */
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+.continue-btn:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 149, 90, 1) 0%,
+        rgb(194, 97, 46) 100%
+    );
+    box-shadow: inset 0 5px 2px rgba(255, 255, 255, 0.2),
+        inset 0 -5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.continue-btn:active {
+    background: linear-gradient(
+        0deg,
+        rgb(190, 110, 67) 0%,
+        rgb(180, 68, 7) 100%
+    );
+    box-shadow: inset 0 5px 2px rgba(255, 255, 255, 0.2),
+        inset 0 -5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.particle-content {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .stat-content .mission-row p {
+        font-size: 2.5em;
+    }
+
+    .continue-btn {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .stat-content .mission-row p {
+        font-size: 2.2em;
+    }
+
+    .continue-btn {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stat-content .mission-row p {
+        font-size: 1.8em;
+    }
+
+    .continue-btn {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stat-content .mission-row p {
+        font-size: 1.4em;
+    }
+
+    .continue-btn {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .stat-content .mission-row p {
+        font-size: 1em;
+    }
+
+    .continue-btn {
+        font-size: 0.8em;
+    }
+}

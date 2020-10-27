@@ -1,0 +1,18 @@
+.star {
+    position: relative;
+    /* height: 80%; */
+}
+
+.star .star-base {
+    /* height: 100%; */
+    width: 100px;
+    height: 100px;
+}
+
+.star .star-sprite {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    visibility: hidden;
+}

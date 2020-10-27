@@ -1,0 +1,209 @@
+.big-progressbar {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.big-progressbar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    background: #f19f54;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #913706;
+    border-radius: 8px;
+    outline: none;
+    /* box-shadow: inset 0 -2px 2px rgb(255 227 200 / 80%); */
+}
+
+.big-progressbar>h5.label {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    z-index: 1;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 50px;
+}
+
+.big-progressbar .value-content .value h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    line-height: 50px;
+    z-index: 1;
+    text-align: right;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.big-progressbar .value-content .value h4.has-2-lines {
+    line-height: 33px;
+}
+
+.big-progressbar .value-content .value h4 small {
+    font-size: 14px;
+    display: block;
+    margin-top: -12px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.big-progressbar>.progress {
+    display: block;
+    height: 100%;
+    width: 0%;
+    border-radius: 8px;
+    background-color: #c67435;
+    box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 1px rgba(135, 50, 4, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.big-progressbar>.progress:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(-45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-radius: 8px;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
+    .big-progressbar .value-content .value {
+        font-size: 1.4em;
+    }
+
+    .big-progressbar .value-content .subLabel,
+    .big-progressbar .label {
+        font-size: 1.2em;
+        font-weight: initial;
+    }
+
+    .big-progressbar {
+        border-radius: 15px;
+    }
+
+    .big-progressbar > .progress,
+    .big-progressbar > .progress:after {
+        border-radius: 14px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .big-progressbar .value-content .value {
+        font-size: 1.2em;
+    }
+
+    .big-progressbar .value-content .subLabel,
+    .big-progressbar .label {
+        font-size: 1em;
+        font-weight: initial;
+    }
+
+    .big-progressbar {
+        border-radius: 12px;
+    }
+
+    .big-progressbar > .progress,
+    .big-progressbar > .progress:after {
+        border-radius: 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .big-progressbar .value-content .value {
+        font-size: 1em;
+    }
+
+    .big-progressbar .value-content .subLabel,
+    .big-progressbar .label {
+        font-size: 0.8em;
+        font-weight: initial;
+    }
+
+    .big-progressbar {
+        border-radius: 10px;
+    }
+
+    .big-progressbar > .progress,
+    .big-progressbar > .progress:after {
+        border-radius: 9px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .big-progressbar .value-content .value {
+        font-size: 0.8em;
+    }
+
+    .big-progressbar .value-content .subLabel,
+    .big-progressbar .label {
+        font-size: 0.6em;
+        font-weight: initial;
+    }
+
+    .big-progressbar {
+        border-radius: 8px;
+    }
+
+    .big-progressbar > .progress,
+    .big-progressbar > .progress:after {
+        border-radius: 7px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .big-progressbar .value-content .value {
+        font-size: 0.6em;
+    }
+
+    .big-progressbar .value-content .subLabel,
+    .big-progressbar .label {
+        font-size: 0.4em;
+        font-weight: initial;
+    }
+
+    .big-progressbar {
+        border-radius: 8px;
+    }
+
+    .big-progressbar > .progress,
+    .big-progressbar > .progress:after {
+        border-radius: 7px;
+    }
+} */
